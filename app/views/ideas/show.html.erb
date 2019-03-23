@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+</p>
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
+
+
+
+<div class="card" style="width: 18rem;">
+  <%= image_tag(@idea.picture_url, :width => 200, class:"card-img-top") if @idea.picture.present? %>
+  <div class="card-body">
+    <h5 class="card-title"> <%= @idea.name %> </h5>
+    <p class="card-text"> <%= @idea.description %> </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
